@@ -1,0 +1,120 @@
+@import "../../styles/variables.scss";
+
+$box-shadow-default: $box-shadow;
+$transform-default: translate(-50%, -50%);
+$transition-default: 1.3s;
+$text-shadow-default: 0px 0px 10px black;
+
+@mixin absolute-center($y-percentage: -50%) {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, $y-percentage);
+}
+
+@mixin gradient-background {
+	background: linear-gradient(
+		271deg,
+		#a0e9ff 30%,
+		#a162e8 50%,
+		#f093b0 70%,
+		#edca85 94%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.project_card {
+	position: relative;
+	align-items: normal;
+	background-color: #111;
+	width: 90%;
+	margin: 1em 1em 3em;
+	padding: 1.3em;
+	gap: 1em;
+	min-height: 300px;
+	max-width: calc(100% - 40px);
+	transition: 1s;
+	box-shadow: $box-shadow-default;
+	opacity: 0;
+	border-radius: 0.7em;
+	overflow: hidden;
+
+	&:hover,
+	&:focus {
+		box-shadow: 10px 10px 40px black;
+		scale: 1.02;
+
+		.project_image_container {
+			transform: translate(-50%, -320%);
+			scale: 0.3;
+		}
+
+		.project_info h2,
+		.project_info h3,
+		.project_icons,
+		.project_desc {
+			opacity: 1;
+		}
+
+		.project_info h2 {
+			@include gradient-background;
+		}
+	}
+
+	.project_image_container {
+		@include absolute-center;
+		width: 90%;
+		max-width: 380px;
+		z-index: 2;
+		transition: $transition-default;
+		filter: drop-shadow($text-shadow-default);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.project_info {
+		h2,
+		h3 {
+			opacity: 0;
+			transition: $transition-default;
+		}
+
+		h2 {
+			font-family: "Bogart";
+			font-size: 1.25rem;
+		}
+
+		h3 {
+			font-size: 0.9rem;
+		}
+	}
+
+	.project_info_bottom {
+		@include absolute-center(-30%);
+		width: 90%;
+	}
+
+	.project_icons {
+		opacity: 0;
+		transition: $transition-default;
+		font-size: 1.3rem;
+		justify-self: flex-start;
+		margin-right: 0.6em;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.project_desc {
+		text-align: center;
+
+		opacity: 0;
+		transition: $transition-default;
+	}
+}

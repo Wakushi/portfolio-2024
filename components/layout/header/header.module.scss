@@ -1,0 +1,112 @@
+@import "../../../styles/variables.scss";
+
+.header {
+	position: fixed;
+	background: -webkit-linear-gradient(bottom, transparent, $shadow-color);
+	z-index: 7;
+	top: 0;
+	padding: 0.7em 1em;
+	width: 100%;
+	gap: 2em;
+
+	@media (width > 768px) {
+		gap: 2em;
+		padding: 0.5em 1em;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@media (width > 1024px) {
+		padding: 0.4em 1.5em;
+	}
+
+	.header_logo {
+		display: none;
+		cursor: pointer;
+
+		@media (width > 768px) {
+			display: block;
+			position: relative;
+			left: -73px;
+
+			&:hover {
+				filter: invert(1);
+			}
+		}
+	}
+
+	.header_nav {
+		ul {
+			gap: 0.7em;
+
+			@media (width > 768px) {
+				gap: 1.2em;
+			}
+
+			li {
+				color: #fff;
+				transition: 0.4s;
+				button,
+				a {
+					font-size: 0.8rem;
+					position: relative;
+				}
+
+				button::before,
+				a::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					background-color: #bd8cf5;
+					width: 0%;
+					height: 2px;
+					transition: 0.4s;
+				}
+
+				button:hover::before,
+				button:focus::before,
+				a:hover::before,
+				a:focus::before {
+					width: 100%;
+				}
+
+				a {
+					padding-bottom: 0.3em;
+					display: block;
+
+					@media (width > 768px) {
+						font-size: 1rem;
+					}
+				}
+
+				button {
+					border: 1px solid red;
+					padding-bottom: 0.4rem;
+					border: transparent;
+					background-color: transparent;
+					cursor: pointer;
+
+					@media (width > 768px) {
+						font-size: 1rem;
+					}
+				}
+
+				i {
+					font-size: 1.1rem;
+					color: #fff;
+					transition: 0.4s;
+					opacity: 0.7;
+
+					&:hover {
+						opacity: 1;
+					}
+
+					@media (width > 768px) {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+}

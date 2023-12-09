@@ -1,0 +1,17 @@
+@import "../../../styles/variables.scss";
+
+.animated_letter {
+	opacity: 0;
+	display: inline-block;
+	line-height: 1;
+	text-shadow: $text-shadow;
+	font-family: $secondary-font;
+	font-weight: 700;
+
+	&.subtitle {
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		color: #ffffff9d;
+		text-shadow: $text-shadow;
+	}
+}
