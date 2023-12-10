@@ -11,14 +11,11 @@
 	gap: 2em;
 
 	@media (width >= 768px) {
-		gap: 2em;
 		padding: 1em 1.5em;
-		justify-content: space-between;
-		align-items: center;
 	}
 
 	@media (width >= 1024px) {
-		padding: 1.2em 1.7em;
+		padding: 2em 2.2rem;
 	}
 
 	.header_nav {

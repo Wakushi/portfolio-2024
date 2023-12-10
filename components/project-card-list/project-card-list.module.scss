@@ -1,12 +1,5 @@
+@import "../../styles/variables.scss";
+
 .projects_list {
 	padding: 2rem 0;
-
-	.context_icon {
-		width: 30px;
-		filter: invert(1);
-
-		&.team_icon {
-			width: 50px;
-		}
-	}
 }

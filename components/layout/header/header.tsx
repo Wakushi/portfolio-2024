@@ -1,29 +1,9 @@
 import classes from "./header.module.scss"
 
-interface HeaderProps {
-	toggleChatModal?: () => void
-}
-
-export default function Header({ toggleChatModal }: HeaderProps) {
+export default function Header() {
 	return (
-		<header
-			className={`${classes.header} flex justify-between slide-in-bottom`}
-		>
-			<nav className={classes.header_nav}>
-				<ul className="flex items-center">
-					<li>
-						<a href="/">Projects</a>
-					</li>
-					<li>
-						<a href="/blog">Blog</a>
-					</li>
-					<li>
-						<button onClick={toggleChatModal}>Contact</button>
-					</li>
-				</ul>
-			</nav>
-
-			<nav className={`${classes.header_nav} flex items-center`}>
+		<header className={`${classes.header} flex slide-in-bottom `}>
+			<nav className={`${classes.header_nav} flex items-center  ml-auto`}>
 				<ul className="flex items-center">
 					<li>
 						<a

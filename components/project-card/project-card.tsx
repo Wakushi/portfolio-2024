@@ -28,7 +28,9 @@ export default function ProjectCard({
 
 	return (
 		<div className={`${classes.project_card} flex flex-col animated-card`}>
-			<div className={`${classes.project_context_icon}`}>
+			<div
+				className={`${classes.project_context_icon} flex items-center gap-2`}
+			>
 				<img
 					src={
 						context === ProjectContext.PERSO

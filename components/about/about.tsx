@@ -7,7 +7,7 @@ export default function About() {
 				<div
 					className={`${classes.profile_description} flex flex-col gap-20`}
 				>
-					<div className="flex flex-col">
+					<div className="flex flex-col flex-1">
 						<h2 className="flex items-center justify-between">
 							Stack <i className="fa-solid fa-toolbox"></i>
 						</h2>
@@ -68,7 +68,7 @@ export default function About() {
 							</ul>
 						</div>
 					</div>
-					<div className="flex flex-col">
+					<div className="flex flex-col flex-1">
 						<h2 className="flex items-center justify-between">
 							About me{" "}
 							<i className="fa-solid fa-address-card"></i>

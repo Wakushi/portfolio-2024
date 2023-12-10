@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+
+.project_display {
+	padding: 1rem;
+
+	@media (width >= 768px) {
+		padding: 5rem 4rem;
+	}
+	h2 {
+		font-size: 8vw;
+		font-weight: 700;
+		font-family: $secondary-font;
+		border-bottom: 1px solid #fff;
+
+		@media (width >= 768px) {
+			font-size: 4rem;
+		}
+
+		@media (width >= 1024px) {
+			font-size: 5rem;
+		}
+	}
+
+	p {
+		opacity: 0.8;
+		font-weight: 300;
+
+		@media (width >= 768px) {
+			font-size: 1.3rem;
+		}
+
+		@media (width >= 1024px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	.project_video {
+		overflow: hidden;
+		padding-bottom: 56.25%;
+		position: relative;
+		height: 0;
+		box-shadow: $box-shadow;
+
+		iframe {
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+
+			position: absolute;
+		}
+	}
+}

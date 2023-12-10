@@ -94,10 +94,10 @@ export default function Hero() {
 					Hi, I'm{" "}
 					<span className="text-italic text-bold">Maxime</span>
 				</p>
-				<AnimatedText text="A web developer" delay={20} fontSize="12" />
+				<AnimatedText text="A web developer" delay={20} fontSize="11" />
 				<p className={`${classes.small_text} fade-in-bottom`}>
 					with a passion for crafting experiences that are engaging,
-					user-friendly and secure.{" "}
+					user-friendly and secure{" "}
 				</p>
 			</div>
 		</div>
