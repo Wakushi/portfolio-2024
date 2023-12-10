@@ -1,6 +1,3 @@
-import React from "react"
-import logo from "@/public/assets/images/logo/logo.png"
-import Image from "next/image"
 import classes from "./header.module.scss"
 
 interface HeaderProps {
@@ -18,19 +15,13 @@ export default function Header({ toggleChatModal }: HeaderProps) {
 						<a href="/">Projects</a>
 					</li>
 					<li>
-						<a href="/wip">Wip</a>
-					</li>
-					<li>
-						<a href="/about">About</a>
+						<a href="/blog">Blog</a>
 					</li>
 					<li>
 						<button onClick={toggleChatModal}>Contact</button>
 					</li>
 				</ul>
 			</nav>
-			<div className={classes.header_logo}>
-				<Image src={logo} width="50" height="50" alt="Logo" />
-			</div>
 
 			<nav className={`${classes.header_nav} flex items-center`}>
 				<ul className="flex items-center">

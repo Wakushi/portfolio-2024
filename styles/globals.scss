@@ -12,6 +12,7 @@ body {
 	color: #d1d1cc;
 	text-decoration: none;
 	list-style: none;
+	font-family: "Roboto", sans-serif;
 }
 
 body,
@@ -64,11 +65,11 @@ img {
 */
 
 .slide-in-bottom {
-	animation: slide-in-bottom 1.8s 500ms ease-in-out forwards;
+	animation: slide-in-bottom 500ms ease-in-out forwards;
 }
 
 .slide-in-top {
-	animation: slide-in-top 500ms ease-in-out forwards;
+	animation: slide-in-top 500ms 500ms ease-in-out forwards;
 }
 
 .float {

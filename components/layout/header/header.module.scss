@@ -6,40 +6,26 @@
 	z-index: 7;
 	top: 0;
 	padding: 0.7em 1em;
+	opacity: 0;
 	width: 100%;
 	gap: 2em;
 
-	@media (width > 768px) {
+	@media (width >= 768px) {
 		gap: 2em;
-		padding: 0.5em 1em;
+		padding: 1em 1.5em;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	@media (width > 1024px) {
-		padding: 0.4em 1.5em;
-	}
-
-	.header_logo {
-		display: none;
-		cursor: pointer;
-
-		@media (width > 768px) {
-			display: block;
-			position: relative;
-			left: -73px;
-
-			&:hover {
-				filter: invert(1);
-			}
-		}
+	@media (width >= 1024px) {
+		padding: 1.2em 1.7em;
 	}
 
 	.header_nav {
 		ul {
 			gap: 0.7em;
 
-			@media (width > 768px) {
+			@media (width >= 768px) {
 				gap: 1.2em;
 			}
 
@@ -75,8 +61,11 @@
 					padding-bottom: 0.3em;
 					display: block;
 
-					@media (width > 768px) {
+					@media (width >= 768px) {
 						font-size: 1rem;
+					}
+					@media (width >= 1024px) {
+						font-size: 1.2rem;
 					}
 				}
 
@@ -87,8 +76,11 @@
 					background-color: transparent;
 					cursor: pointer;
 
-					@media (width > 768px) {
+					@media (width >= 768px) {
 						font-size: 1rem;
+					}
+					@media (width >= 1024px) {
+						font-size: 1.2rem;
 					}
 				}
 
@@ -102,8 +94,12 @@
 						opacity: 1;
 					}
 
-					@media (width > 768px) {
-						font-size: 1.8rem;
+					@media (width >= 768px) {
+						font-size: 1.4rem;
+					}
+
+					@media (width >= 1024px) {
+						font-size: 1.6rem;
 					}
 				}
 			}

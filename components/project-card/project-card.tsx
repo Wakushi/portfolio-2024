@@ -1,4 +1,7 @@
 import classes from "./project-card.module.scss"
+import soloIcon from "@/public/assets/images/icons/solo.webp"
+import teamIcon from "@/public/assets/images/icons/team.webp"
+import { ProjectContext } from "@/public/data/projects"
 
 interface ProjectCardProps {
 	img: string
@@ -7,6 +10,7 @@ interface ProjectCardProps {
 	gitlink: string
 	link: string
 	desc: string
+	context: string
 }
 
 export default function ProjectCard({
@@ -15,7 +19,8 @@ export default function ProjectCard({
 	title,
 	gitlink,
 	link,
-	desc
+	desc,
+	context
 }: ProjectCardProps) {
 	function hasLink(): boolean {
 		return !!link || !!gitlink
@@ -23,6 +28,16 @@ export default function ProjectCard({
 
 	return (
 		<div className={`${classes.project_card} flex flex-col animated-card`}>
+			<div className={`${classes.project_context_icon}`}>
+				<img
+					src={
+						context === ProjectContext.PERSO
+							? soloIcon.src
+							: teamIcon.src
+					}
+				></img>
+			</div>
+
 			<div className={classes.project_image_container}>
 				<img src={img}></img>
 			</div>

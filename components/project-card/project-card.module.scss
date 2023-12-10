@@ -1,9 +1,7 @@
 @import "../../styles/variables.scss";
 
-$box-shadow-default: $box-shadow;
 $transform-default: translate(-50%, -50%);
 $transition-default: 1.3s;
-$text-shadow-default: 0px 0px 10px black;
 
 @mixin absolute-center($y-percentage: -50%) {
 	position: absolute;
@@ -27,7 +25,7 @@ $text-shadow-default: 0px 0px 10px black;
 .project_card {
 	position: relative;
 	align-items: normal;
-	background-color: #111;
+	background-color: #191919;
 	width: 90%;
 	margin: 1em 1em 3em;
 	padding: 1.3em;
@@ -35,10 +33,20 @@ $text-shadow-default: 0px 0px 10px black;
 	min-height: 300px;
 	max-width: calc(100% - 40px);
 	transition: 1s;
-	box-shadow: $box-shadow-default;
+	box-shadow: $box-shadow;
 	opacity: 0;
 	border-radius: 0.7em;
 	overflow: hidden;
+
+	@media (width >= 768px) {
+		padding: 1.8em;
+		max-width: 1000px;
+		min-height: 500px;
+	}
+
+	@media (width >= 1024px) {
+		min-height: 600px;
+	}
 
 	&:hover,
 	&:focus {
@@ -60,6 +68,28 @@ $text-shadow-default: 0px 0px 10px black;
 		.project_info h2 {
 			@include gradient-background;
 		}
+
+		.project_context_icon {
+			opacity: 1;
+		}
+	}
+
+	.project_context_icon {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		opacity: 0.6;
+		transition: 500ms ease-in-out;
+		filter: invert(1);
+
+		@media (width >= 768px) {
+			width: 30px;
+		}
+
+		@media (width >= 1024px) {
+			width: 40px;
+		}
 	}
 
 	.project_image_container {
@@ -68,7 +98,14 @@ $text-shadow-default: 0px 0px 10px black;
 		max-width: 380px;
 		z-index: 2;
 		transition: $transition-default;
-		filter: drop-shadow($text-shadow-default);
+		filter: drop-shadow($text-shadow);
+
+		@media (width >= 768px) {
+			max-width: 580px;
+		}
+		@media (width >= 1024px) {
+			max-width: 680px;
+		}
 
 		img {
 			width: 100%;
@@ -87,10 +124,19 @@ $text-shadow-default: 0px 0px 10px black;
 		h2 {
 			font-family: "Bogart";
 			font-size: 1.25rem;
+			@media (width >= 768px) {
+				font-size: 2rem;
+			}
+			@media (width >= 1024px) {
+				font-size: 2.4rem;
+			}
 		}
 
 		h3 {
 			font-size: 0.9rem;
+			@media (width >= 768px) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 
@@ -109,12 +155,25 @@ $text-shadow-default: 0px 0px 10px black;
 		&:hover {
 			opacity: 1;
 		}
+
+		@media (width >= 768px) {
+			font-size: 2rem;
+		}
 	}
 
 	.project_desc {
 		text-align: center;
-
 		opacity: 0;
 		transition: $transition-default;
+
+		@media (width >= 768px) {
+			font-size: 1.5rem;
+		}
+
+		@media (width >= 1024px) {
+			font-size: 2rem;
+			max-width: 80%;
+			margin: 0 auto;
+		}
 	}
 }

@@ -10,6 +10,11 @@ export interface Project {
 	link: string
 }
 
+export enum ProjectContext {
+	PRO = "pro",
+	PERSO = "perso"
+}
+
 export const projects: Project[] = [
 	{
 		id: "1",
@@ -58,7 +63,7 @@ export const projects: Project[] = [
 	{
 		id: "4",
 		context: "pro",
-		image: "https://i.imgur.com/IHxi9cD.png",
+		image: "https://i.imgur.com/f55n1ZU.png",
 		desc: "This app helps drivers to manage their rides, their clients, invoices and even share their rides with their partners so they can focus more on providing excellent service to their passengers. I've worked as a team member on front-end of this application.",
 		type: "Android/iOS application",
 		stack: "Ionic / PHP / SQL",
