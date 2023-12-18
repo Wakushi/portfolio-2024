@@ -32,6 +32,7 @@ export default function ProjectCardList() {
 						gitlink={project.gitlink}
 						link={project.link}
 						context={project.context}
+						stack={project.stack}
 					/>
 				)
 			})}

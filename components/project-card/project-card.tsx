@@ -11,6 +11,7 @@ interface ProjectCardProps {
 	link: string
 	desc: string
 	context: string
+	stack: string
 }
 
 export default function ProjectCard({
@@ -20,7 +21,8 @@ export default function ProjectCard({
 	gitlink,
 	link,
 	desc,
-	context
+	context,
+	stack
 }: ProjectCardProps) {
 	function hasLink(): boolean {
 		return !!link || !!gitlink
@@ -65,6 +67,9 @@ export default function ProjectCard({
 				)}
 
 				<p className={`${classes.project_desc}`}>{desc}</p>
+			</div>
+			<div className={`${classes.project_stack}`}>
+				<p>{stack}</p>
 			</div>
 		</div>
 	)
