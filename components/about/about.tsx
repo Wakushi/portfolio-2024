@@ -81,7 +81,7 @@ export default function About() {
 						<p>
 							I'm currently employed as a junior web developer,
 							creating tailor-made web applications to help our
-							clients boost their productivity and profitabily.{" "}
+							clients boost their productivity and profitability.{" "}
 						</p>
 						<p>
 							When I'm not working, I enjoy building side
