@@ -1,4 +1,3 @@
-import { useState } from "react"
 import classes from "./project-display.module.scss"
 import ImageToModal from "../ui/image-modal/image-modal"
 
@@ -8,6 +7,7 @@ export default function ProjectDisplay() {
 			<section
 				className={`${classes.project_display} flex flex-col gap-4 `}
 			>
+				<div className={classes.top_transition}></div>
 				<h2>DEVMentor</h2>
 				<p>
 					<i className="fa-solid fa-caret-right"></i> A quick overview
