@@ -1,0 +1,44 @@
+@import "../../../styles/variables.scss";
+
+.image_container {
+	box-shadow: $box-shadow;
+	cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(17, 17, 17, 0.952);
+
+	i {
+		position: absolute;
+		font-size: 1.4rem;
+		top: 20px;
+		right: 20px;
+		opacity: 0.5;
+		transition: 500ms ease-in-out;
+		z-index: 4;
+		cursor: pointer;
+
+		@media (width >= 768px) {
+			font-size: 1.9rem;
+			top: 30px;
+			right: 30px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.modal .modal-image-container {
+	opacity: 0;
+	img {
+		max-height: 90vh;
+	}
+}

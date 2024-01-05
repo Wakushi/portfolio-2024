@@ -2,9 +2,11 @@
 
 .project_display {
 	padding: 1rem;
+	position: relative;
 
 	@media (width >= 768px) {
 		padding: 5rem 4rem;
+		gap: 2rem;
 	}
 	h2 {
 		font-size: 8vw;
@@ -31,6 +33,20 @@
 
 		@media (width >= 1024px) {
 			font-size: 1.5rem;
+		}
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	.project_display_info {
+		max-width: 1500px;
+		margin: 0 auto;
+		@media (width >= 1024px) {
+			flex-direction: row;
+			gap: 4rem;
 		}
 	}
 

@@ -20,6 +20,12 @@ header {
 	background-color: $primary-color;
 }
 
+body {
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
 img {
 	display: block;
 }

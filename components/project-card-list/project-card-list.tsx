@@ -21,6 +21,7 @@ export default function ProjectCardList() {
 		<div
 			className={`${classes.projects_list} flex flex-col items-center justify-center`}
 		>
+			<h2 className={`${classes.title}`}>Team / Solo projects</h2>
 			{projects.map((project: Project) => {
 				return (
 					<ProjectCard

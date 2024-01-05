@@ -27,7 +27,7 @@ export default function About() {
 								</li>
 								<li>
 									<i className="fa-solid fa-caret-right"></i>{" "}
-									AWS
+									Firebase
 								</li>
 							</ul>
 							<ul className="flex flex-col gap-5">
@@ -74,14 +74,14 @@ export default function About() {
 							<i className="fa-solid fa-address-card"></i>
 						</h2>
 						<p>
-							Hello, my name is Maxime, I'm a french web developer
-							based in Paris. I'm also a blockchain enthusiast and
-							a web3 security researcher.
+							Hi I'm Maxime, a french web developer based in
+							Paris. I'm also a blockchain enthusiast and a web3
+							security researcher.
 						</p>
 						<p>
-							I'm currently employed as a junior web developer,
-							creating tailor-made web applications to help our
-							clients boost their productivity and profitability.{" "}
+							I'm currently employed as a web developer, creating
+							tailor-made web applications to help our clients
+							boost their productivity and profitability.{" "}
 						</p>
 						<p>
 							When I'm not working, I enjoy building side

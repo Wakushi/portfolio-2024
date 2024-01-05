@@ -116,17 +116,6 @@ export const projects: Project[] = [
 		link: "https://paths-one.vercel.app/"
 	},
 	{
-		id: "9",
-		context: "perso",
-		image: "https://i.imgur.com/7zUILpp.png",
-		desc: "Solidity Lottery Smart Contract made using Foundry and Chainlink. This contracts allows anyone to buy a ticket to enter the lottery and a random winner selected every X minutes will win the pot.",
-		type: "Smart Contract",
-		stack: "Solidity / Foundry / Chainlink",
-		title: "Smart lottery",
-		gitlink: "https://github.com/Wakushi/foundry-smart-contract-lottery",
-		link: ""
-	},
-	{
 		id: "10",
 		context: "perso",
 		image: "https://i.imgur.com/iElYslB.png",
@@ -136,16 +125,5 @@ export const projects: Project[] = [
 		title: "Helix Vault",
 		gitlink: "https://github.com/Wakushi/helix-vaults",
 		link: "https://helix-vaults.vercel.app/"
-	},
-	{
-		id: "11",
-		context: "perso",
-		image: "https://i.imgur.com/BQKq9su.png",
-		desc: "Solidity Smart Contract made using Foundry. It's a crowd funding contract that registers donators' addresses and allows the deployer to withdraw the funds.",
-		type: "Smart Contract",
-		stack: "Solidity / Foundry / Chainlink",
-		title: "Crowd Funding",
-		gitlink: "https://github.com/Wakushi/foundry-fund-me-f23",
-		link: ""
 	}
 ]
